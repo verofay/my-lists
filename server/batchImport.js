@@ -1,8 +1,5 @@
 const { MongoClient } = require("mongodb");
 
-//Read info from local database...
-// const { flights, reservations } = require("./data");
-
 require("dotenv").config();
 const { MONGO_URI } = process.env;
 
@@ -31,4 +28,4 @@ const getCollection = async (dbName) => {
 };
 
 // call the function
-getCollection("lists");
+getCollection();

@@ -2,12 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const SignIn = () => {
-  return <Div>SignIn</Div>;
+  return (
+    <Wrapper>
+      <Form>
+        <Input />
+      </Form>
+    </Wrapper>
+  );
 };
 
-const Div = styled.div`
-  border: orange solid 4px;
-  background-color: orange;
-`;
+const Wrapper = styled.div``;
+
+const Form = styled.form``;
+
+const Input = styled.div``;
 
 export default SignIn;

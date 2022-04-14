@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 export const breakpoints = { tablet: "600px" };
 
 export default createGlobalStyle`

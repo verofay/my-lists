@@ -2,16 +2,21 @@
 
 // import the needed node_modules.
 const express = require("express");
-const app = express()
- 
+const app = express();
 
+const { getListId } = require("./handlers");
+
+express();
+
+
+app.use(express.json());
 
 //ENDPOINTS
+//GET
+app.get("/api/list/{list_id}", getListId);
 
-
-
-  
-  app.get("*", (req, res) => {
+app
+  .get("*", (req, res) => {
     res.status(404).json({
       status: 404,
       message: "This is obviously not the page you are looking for.",
