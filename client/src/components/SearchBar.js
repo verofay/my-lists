@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
-// const API_KEY = `${process.env.REACT_API_APP_KEY}`;
-
 const SearchBar = () => {
   const [searchInput, setSearchInput] = useState("");
   const [state, setState] = useState("");
@@ -13,14 +11,7 @@ const SearchBar = () => {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    fetch(
-      `https://api.themoviedb.org/3/list/{list_id}?api_key=614fb9d9d416234b14abdd8be76a4451&language=en-US`
-    )
-      .then((data) => data.json())
-      .then((data) => {
-        console.log(data);
-        setState({ movies: [...data.results] });
-      });
+   
   };
 
   const handleChange = (ev) => {

@@ -4,16 +4,18 @@
 const express = require("express");
 const app = express();
 
-const { getListId } = require("./handlers");
+const {
+   getPopularMovie,
+} = require("./handlers");
 
-express();
-
+// express();
 
 app.use(express.json());
 
 //ENDPOINTS
 //GET
-app.get("/api/list/{list_id}", getListId);
+// app.get("/api/list/{list_id}", getListId);
+app.get("/api/popular-movie", getPopularMovie);
 
 app
   .get("*", (req, res) => {

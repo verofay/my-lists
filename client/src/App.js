@@ -11,8 +11,6 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import SignIn from "./components/SignIn";
 
-// const api_key = "614fb9d9d416234b14abdd8be76a4451";
-// console.log("Hello", api_key);
 
 const App = () => {
   return (
