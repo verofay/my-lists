@@ -6,6 +6,7 @@ const app = express();
 
 const {
    getPopularMovie,
+   getSearchMovie
 } = require("./handlers");
 
 // express();
@@ -16,8 +17,12 @@ app.use(express.json());
 //GET
 // app.get("/api/list/{list_id}", getListId);
 app.get("/api/popular-movie", getPopularMovie);
+app.get("api/popular-movie/:search", getSearchMovie)
+// app.get("", getUsers)
 
-app
+//POST
+// app.post("", createUsers)
+
   .get("*", (req, res) => {
     res.status(404).json({
       status: 404,

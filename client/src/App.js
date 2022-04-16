@@ -11,16 +11,18 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import SignIn from "./components/SignIn";
 
-
 const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyles />
       <Header />
-      <LandingPage />
       <Switch>
         <Div>
-          <Route to="/">home</Route>
+          <Route to="/landingPage">LandingPage</Route>
+          <Route></Route>
+          <Route></Route>
+          <Route></Route>
+          <Route></Route>
           <SignIn />
         </Div>
 

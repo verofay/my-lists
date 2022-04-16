@@ -17,6 +17,7 @@ const options = {
   useUnifiedTopology: true,
 };
 
+//popularMovies
 const getPopularMovie = async (req, res) => {
   try {
     console.log("HelloHelloHello");
@@ -46,6 +47,16 @@ const getPopularMovie = async (req, res) => {
   }
 };
 
+getPopularMovie = async (req, res) => {
+  console.log(getPopularMovie);
+};
+
+//SearchMovies
+// const getSearchMovie = (req, res) => {};
+
+//Users
+
 module.exports = {
   getPopularMovie,
+  getSearchMovie,
 };

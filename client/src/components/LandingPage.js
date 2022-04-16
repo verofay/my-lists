@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled, { ThemeConsumer } from "styled-components";
+import SignIn from "./SignIn";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -10,7 +11,9 @@ const LandingPage = () => {
       });
   }, []);
 
-  return <>Landing Page</>;
+  return <Div>landingPage</Div>;
 };
+
+const Div = styled.div``;
 
 export default LandingPage;

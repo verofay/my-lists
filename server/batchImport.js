@@ -1,31 +1,21 @@
 const { MongoClient } = require("mongodb");
-
 require("dotenv").config();
 const { MONGO_URI } = process.env;
+const users = require("../data/users.json");
 
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
 
-const getCollection = async (dbName) => {
-  //waiting for the new client request
-  const client = new MongoClient(MONGO_URI, options);
+//waiting for the new client request
 
-  //connect to the client
-  await client.connect();
-  //connect to database
-  const db = client.db(dbName);
-  console.log("connected!", dbName);
+//connect to the client
 
-  //new variable "await" a "flight" from db
-  //   await db.collection("Reservations").insertMany(reservations);
-  //   await db.collection("SA231").insertMany(flights.SA231);
+//connect to database
 
-  //close the connection database server
-  client.close();
-  console.log("disconnected!");
-};
+//new variable "await" a "flight" from db
+
+//close the connection database server
 
 // call the function
-getCollection();
