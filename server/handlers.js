@@ -10,6 +10,7 @@ const fetch = (...args) =>
 //waiting for the new client request
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
+// const async = require("async");
 const { MONGO_URI, API_KEY } = process.env;
 
 const options = {
@@ -18,15 +19,16 @@ const options = {
 };
 
 //popularMovies
-const getPopularMovie = async (req, res) => {
+let getPopularMovie = async (req, res) => {
   try {
-    console.log("HelloHelloHello");
+    console.log("HelloHelloHello", getPopularMovie);
 
     const popularMovies = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
     const rawData = await fetch(popularMovies);
     const movieData = await rawData.json();
-
+    console.log("Md", movieData);
+    console.log("rD", rawData);
     if (movieData) {
       res.status(200).json({
         status: 200,
@@ -47,16 +49,10 @@ const getPopularMovie = async (req, res) => {
   }
 };
 
-getPopularMovie = async (req, res) => {
-  console.log(getPopularMovie);
+const popularMovie = async (req, res) => {
+  await console.log("hello?", popularMovie);
 };
-
-//SearchMovies
-// const getSearchMovie = (req, res) => {};
-
-//Users
 
 module.exports = {
   getPopularMovie,
-  getSearchMovie,
 };

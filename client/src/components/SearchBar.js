@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [searchInput, setSearchInput] = useState("");
   const [state, setState] = useState("");
 
-  // console.log("State", state);
+  console.log("State", state);
   console.log("SearchInput", searchInput);
 
   const handleSubmit = (ev) => {
@@ -26,7 +26,7 @@ const SearchBar = () => {
         placeholder="Looking for something?!"
         onChange={handleChange}
         onSubmit={handleSubmit}
-        // value={}
+        // value="defaultValue"
       />
       <Submit>Search</Submit>
     </Wrapper>
@@ -34,7 +34,6 @@ const SearchBar = () => {
 };
 
 const Wrapper = styled.div`
-  /* border: lightblue solid 10px; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 11px;

@@ -19,10 +19,10 @@ const App = () => {
       <Switch>
         <Div>
           <Route to="/landingPage">LandingPage</Route>
+          {/* <Route></Route>
           <Route></Route>
           <Route></Route>
-          <Route></Route>
-          <Route></Route>
+          <Route></Route> */}
           <SignIn />
         </Div>
 
