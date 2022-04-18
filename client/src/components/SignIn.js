@@ -1,55 +1,57 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const handleSubmit = (ev) => {
-  ev.preventDefault();
-};
+// const handleSubmit = (ev) => {
+//   ev.preventDefault();
+// };
 const SignIn = () => {
-  const [email, setEmail] = useState();
-  const [name, setName] = useState();
-  const [password, setPassword] = useState();
+  return <></>;
+  // const [email, setEmail] = useState();
+  // const [name, setName] = useState();
+  // const [password, setPassword] = useState();
 
-  return (
-    <Wrapper>
-      <BoxContainer>
-        <DIV className="Login">
-          <Form
-            onSubmit={handleSubmit}
-            type="email"
-            value={email}
-            onChange={(ev) => setEmail(ev.target.value)}
-          />
-          <Label>
-            email:
-            <Input
-              type="text"
-              name="email"
-              placeholder="your@email.com"
-              value="tbd"
-            />
-          </Label>
-          <Form
-            onSubmit={handleSubmit}
-            type="name"
-            value={name}
-            onChange={(ev) => setName(ev.target.value)}
-          />
-          <Label>
-            name:
-            <Input
-              type="text"
-              name="name"
-              placeholder="your name here!"
-              value="tbd"
-            />
-          </Label>
-          <Form
-            onSubmit={handleSubmit}
-            type="password"
-            value={password}
-            onChange={(ev) => setPassword(ev.target.value)}
-          />
-          {/* <Label>
+  // return (
+  //   <Wrapper>
+  //     <BoxContainer>
+  //       <DIV className="Login">
+  //         <Form
+  //           onSubmit={handleSubmit}
+  //           type="email"
+  //           value={email}
+  //           onChange={(ev) => setEmail(ev.target.value)}
+  //         />
+  //         <Label>
+  //           email:
+  //           <Input
+  //             type="text"
+  //             name="email"
+  //             placeholder="your@email.com"
+  //             value="tbd"
+  //           />
+  //         </Label>
+  //         <Form
+  //           onSubmit={handleSubmit}
+  //           type="name"
+  //           value={name}
+  //           onChange={(ev) => setName(ev.target.value)}
+  //         />
+  //         <Label>
+  //           name:
+  //           <Input
+  //             type="text"
+  //             name="name"
+  //             placeholder="your name here!"
+  //             value="tbd"
+  //           />
+  //         </Label>
+  //         <Form
+  //           onSubmit={handleSubmit}
+  //           type="password"
+  //           value={password}
+  //           onChange={(ev) => setPassword(ev.target.value)}
+  //         />
+  {
+    /* <Label>
             password:
             <Input
               type="text"
@@ -57,12 +59,13 @@ const SignIn = () => {
               placeholder="your password"
               value="tbd"
             />
-          </Label> */}
-        </DIV>
-      </BoxContainer>
-      <Button className="Login">submit</Button>
-    </Wrapper>
-  );
+          </Label> */
+  }
+  //       </DIV>
+  //     </BoxContainer>
+  //     <Button className="Login">submit</Button>
+  //   </Wrapper>
+  // );
 };
 
 const Wrapper = styled.div`

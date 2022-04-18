@@ -9,7 +9,7 @@ import styled from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
-import SignIn from "./components/SignIn";
+// import SignIn from "./components/SignIn";
 
 const App = () => {
   return (
@@ -17,19 +17,13 @@ const App = () => {
       <GlobalStyles />
       <Header />
       <Switch>
-        <Div>
-          <Route to="/landingPage">LandingPage</Route>
-          {/* <Route></Route>
-          <Route></Route>
-          <Route></Route>
-          <Route></Route> */}
-          <SignIn />
-        </Div>
-
-        <Route to="/users/signIn">signin</Route>
-        <Route to="/users/profile">profile</Route>
-        <Route to="/users/lists">lists</Route>
-        <Route to="/users/:id">infos?</Route>
+        <Route to="/">
+          LandingPage
+          <LandingPage />
+        </Route>
+        <Route to="/users/signIn">
+          {/* <SignIn /> */}
+        </Route>
       </Switch>
     </BrowserRouter>
   );

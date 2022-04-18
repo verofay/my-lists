@@ -7,7 +7,8 @@ const options = {
   useUnifiedTopology: true,
 };
 
-const users = require("./data");
+const users = require("./data/users.json");
+console.log("users", users);
 
 //waiting for the new client request
 const batchImport = async (users) => {
@@ -28,22 +29,3 @@ const batchImport = async (users) => {
 
 // call the function
 batchImport(users);
-
-//TEMPLATE
-// const batchImport = async (items) => {
-//     const client = new MongoClient(MONGO_URI, options);
-// try {
-//     await client.connect();
-//     const db = client.db("exercise_2");
-//     // console.log("connected!", seats);
-
-//     await db.collection("seats").insertMany(items);
-
-// } catch(err){
-//     console.log(err)
-// }
-//     client.close();
-//     console.log("disconnected!");
-// }
-
-// batchImport(seats)

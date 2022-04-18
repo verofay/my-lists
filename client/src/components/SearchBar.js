@@ -1,13 +1,15 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const SearchBar = () => {
   const [searchInput, setSearchInput] = useState("");
   const [state, setState] = useState("");
 
-  console.log("State", state);
-  console.log("SearchInput", searchInput);
+  // useEffect()
+
+  // console.log("State", state);
+  // console.log("SearchInput", searchInput);
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
