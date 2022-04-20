@@ -21,9 +21,12 @@ const App = () => {
           LandingPage
           <LandingPage />
         </Route>
-        <Route to="/users/signIn">
-          {/* <SignIn /> */}
-        </Route>
+
+        <Route>SignIn</Route>
+        <Route>Profile</Route>
+        <Route>List</Route>
+        <Route>Movies</Route>
+        {/* <SignIn /> */}
       </Switch>
     </BrowserRouter>
   );

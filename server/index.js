@@ -8,11 +8,11 @@ const app = express();
 
 const {
   getPopularMovie,
-  getSearchMovie,
-  getMainPage,
+  // getSearchMovie,
+  // getMainPage,
   getUsers,
-  usersSignIn,
-  addPopularMovie,
+  // usersSignIn,
+  // addPopularMovie,
 } = require("./handlers");
 
 // express();
@@ -22,7 +22,7 @@ app.use(express.json());
 //ENDPOINTS
 //GET
 app.get("/api/movie/popular", getPopularMovie);
-// app.get("api/movie/popular/:search", getSearchMovie);
+// app.get("api/movie/:search", getSearchMovie);
 app.get("/api/users", getUsers);
 
 //POST

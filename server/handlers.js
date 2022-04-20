@@ -27,7 +27,7 @@ const getPopularMovie = async (req, res) => {
 
     const rawData = await fetch(popularMovies);
     const movieData = await rawData.json();
-    // console.log("rD", rawData);
+    console.log("rD", rawData);
     if (movieData) {
       res.status(200).json({
         status: 200,
@@ -56,8 +56,6 @@ console.log;
 //   console.log("AddingPopMovies", addPopularMovie);
 // };
 
-// put request to update movies in db
-
 // const getSearchMovie = async (req, res) => {
 //   try{
 //     const findMovie=
@@ -82,7 +80,14 @@ const getUsers = async (req, res) => {
   }
 };
 
+// const getSearchMovie = async (req, res) => {
+//   try{
+//     const client = new MongoClient(MONGO_URI, options);
+//   }
+// };
+
 module.exports = {
   getPopularMovie,
   getUsers,
+  // getSearchMovie,
 };

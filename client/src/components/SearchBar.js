@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { AppContext } from "../AppContext";
 
 const SearchBar = () => {
+  const { AppContext } = useContext(AppContext);
   const [searchInput, setSearchInput] = useState("");
-  const [state, setState] = useState("");
+  const [data, setData] = useState();
 
-  // useEffect()
+  useEffect(() => {
+    fetch(`api/movie/popular/:search`)
+      .then((res) => res.json)
+      .then((data) => {
+        setData(data.results);
+        console.log("results", data.results);
+      });
+  }, []);
 
   // console.log("State", state);
   // console.log("SearchInput", searchInput);
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-  };
-
   const handleChange = (ev) => {
     ev.preventDefault();
-    setSearchInput({ searchTerm: ev.target.value });
+    setSearchInput(ev.target.value);
+    if (searchInput.length > 0) {
+      data.results.filter((movie) => {
+        return data.results.movie.match(searchInput);
+      });
+    }
+    // movies: [], setSearchInput({ searchTerm: "" });
   };
 
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+    // setState({ movies: [...results] });
+  };
   return (
     <Wrapper>
       <SearchArea />
@@ -28,7 +43,7 @@ const SearchBar = () => {
         placeholder="Looking for something?!"
         onChange={handleChange}
         onSubmit={handleSubmit}
-        // value="defaultValue"
+        value={searchInput}
       />
       <Submit>Search</Submit>
     </Wrapper>
